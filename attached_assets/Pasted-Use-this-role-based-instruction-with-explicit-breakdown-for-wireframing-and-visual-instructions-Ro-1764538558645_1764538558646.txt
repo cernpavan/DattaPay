@@ -1,0 +1,258 @@
+Use this role-based instruction with explicit breakdown for wireframing and visual instructions:
+
+Role:
+World-Class Product Designer — Modern Fintech, specializing in next-generation international payments and yield.
+
+Objective:
+Design a premium, Stripe-inspired UI for a new fintech product replacing a legacy experience. The platform should empower freelancers and creators globally to receive USD/EUR payments, instantly convert to stablecoins (USDC/USDT), and earn yield—clearly positioning the product as the best-in-class, fastest, and most trustworthy.
+
+Context:
+
+Target users: Freelancers/creators worldwide needing to accept global payments, shield against home-currency volatility, and maximize earnings.
+
+Key flows: Receiving client payments in USD/EUR, instant stablecoin payouts, yield staking, balance/yield visualization
+
+Flat universal fee: 0.5% (should be highly visible).
+
+Modern, “international” but approachable and warm style.
+
+Instructions:
+Develop a structured, wireframe-level UI outline for this product, inspired by Stripe, Ramp, Brex, and Circle. Detail primary flows, core screens, UI elements, and suggested copy for key messages. Highlight visual and interaction cues, aesthetic guidelines, and modern design standards.
+
+Output format:
+
+List each primary screen with a numbered heading.
+
+For each, detail:
+
+Core user flow (step-by-step)
+
+Key UI Components (inputs, cards, buttons, stats, graphs)
+
+Suggested copy for critical actions/call-outs
+
+Visual/aesthetic guidance (shapes, color cues, font styles, layout)
+
+Brand inspiration (Stripe/Brex reference)
+
+Include a summary Style/Component Guide section with:
+
+Palette specification (with hex/RGB as guidance)
+
+Font guidance (reference Stripe, Circle)
+
+Button, card, and form field shapes/styles
+
+Elevation, motion, and grid suggestions
+
+Accessibility and localization cues
+
+End with concise suggestions to “raise the bar” beyond Cacao’s example.
+
+Example Output (for the model):
+[RESPONSE STRUCTURE]
+
+1. Home / Dashboard
+Flow:
+User lands on dashboard; sees instant balance (USD/EUR, USDC/USDT), yield earned, “Receive Payment” CTA.
+
+UI Components:
+
+Hero balance card: “Available: $2,305.00 / €0.00” (big, bold)
+
+Sub-cards: “Earning 4.2% APY on idle funds | Flat 0.5% payout fee always.”
+
+“Receive Payment” Button (primary color, round, large, clear)
+
+Transaction history timeline (compact, date-grouped)
+
+Yield graph: “Your balance growth” (Sparkline or area chart)
+
+Notifications (“You received $1,250 from Client X”)
+
+Suggested Copy:
+
+“Empowering freelancers—receive, grow, and spend—instantly, globally.”
+
+“Your money, earning yield from day one.”
+
+Visual Guidance:
+
+Use Stripe’s blue-teal with clean white background
+
+Shadows and rounded corners for financial cards; subtle gradient only for hero
+
+Large, weight-600 headlines
+
+Button: --color-primary fill, white text, drop shadow, pill shape
+
+Brand Inspiration:
+
+Layout + visual density: Stripe Dashboard
+
+Iconography + cards: Circle’s Treasury app
+
+2. Receive Payment Flow
+Flow:
+Wizard/stepper process:
+a. Copy unique account details (USD/EUR) to send to client
+b. Track payment status
+c. Confirmation screen with instant on-ramp to USDC/USDT
+
+UI Components:
+
+Step indicator (horizontal/vertical, progress visible)
+
+Card: Instructions for client wire/SEPA, with “Copy to clipboard”
+
+Animated status: “Waiting for funds (should arrive in minutes)”
+
+Success state: “Funds received, now in USDC”
+
+Flat fee callout (always in view): “Just 0.5%—no surprises.”
+
+“View payout” or “Stake now” CTA
+
+Suggested Copy:
+
+“Share these details with your client to receive USD or EUR.”
+
+“Once received, your funds are instantly available and earning.”
+
+“Secure, low cost. Powered by [your brand, e.g., Ramp].”
+
+Visual Guidance:
+
+Progress steps use brand accent (blue/teal)
+
+Card edges: 16px radius, drop-shadow
+
+Focus/hover states visible
+
+Fee indicator visually sticky or “badged” per Stripe
+
+Brand Inspiration:
+
+Stepper + UX: Ramp onboarding
+
+Card clarity: Stripe Connect/Terminal
+
+3. Payout & Staking
+Flow:
+Once payment lands, user sees conversion to USDC/USDT and immediate staking offer.
+
+UI Components:
+
+Modal or inline section: “Convert to stablecoin” (show toggle between USDC/USDT)
+
+“Stake now” CTA, with yield rate (linked to provider, e.g., Aave)
+
+Projected earnings card: “With $1,000, you’re projected to earn $42/y”
+
+Conversion confirmation: “Your funds are now staked—earning starts now”
+
+Suggested Copy:
+
+“Payout complete—protect your earnings and grow automatically.”
+
+“Stake unused funds and earn market yield instantly.”
+
+Visual Guidance:
+
+Modal: Glassmorphism effect (Stripe Treasuries style)
+
+High-contrast success state (green accent for yield, blue/teal for stablecoin selection)
+
+APY and yield are always larger text, small description below.
+
+Brand Inspiration:
+
+Yield cards: Circle Treasury yield
+
+Conversion flows: Brex, Ramp
+
+4. Balance Visualization
+Flow:
+See current and historical balances, visualizing fiat → stable → yield growth.
+
+UI Components:
+
+“Growth over time” area chart (Stripe style, subtle grid background, tooltips)
+
+Summary cards: “Yield earned”, “Total received”, “Fees paid (always 0.5%)”
+
+“Export CSV” button (compact, secondary)
+
+Suggested Copy:
+
+“Your money, always growing. Withdraw or stake anytime.”
+
+Visual Guidance:
+
+Chart highlights yield impact (area color fill to distinguish yield vs principal)
+
+Transparent overlays for localization/currency toggles
+
+Brand Inspiration:
+
+Brex dashboard analytics, Stripe Reporting
+
+5. Universal Elements
+Fee transparency: Fee (0.5%) always visible, explained, never hidden.
+
+Trust signals: Compliance badges, user testimonials with real names/faces.
+
+CTA buttons: Large, clear, always color-consistent.
+
+Footer: Trust badges, brand partners, legal/disclaimer info.
+
+6. Style & Component Guide
+Palette:
+
+Primary: Stripe blue (#635BFF), Circle teal (#21808D), white (#FFFFFF), soft neutrals.
+
+Secondary/accent: Soft green for yield (#22C9A4), error red (#FF5459), compliant grays.
+
+Typography:
+
+Stripe’s Inter, Geist, or similar modern sans-serif.
+
+700 weight for headings; 400–500 for body.
+
+Shapes:
+
+Buttons: 24px radius; pill/capsule style.
+
+Cards: 16px+ radius, shadow (box-shadow: 0 4px 24px rgba(33,128,141,0.08))
+
+Motion:
+
+Fast (150ms) hover/focus, visible for all actionables.
+
+Grid:
+
+8–12 column base, gutters 24px+. Stripe-like vertical rhythm.
+
+Accessibility:
+
+All colors pass WCAG AA for contrast.
+
+Font >16px min for body.
+
+All flows localizable (LTR/RTL, i18n ready).
+
+7. Suggestions to Raise the Bar
+Merge Stripe/Circle’s world-class minimalism with a touch more personality via bold, “hero” illustrations (SVG-based, soft gradients).
+
+Make fee/value props even more visible (persistent sticky panel, “how you save money” graphs).
+
+User onboarding: offer interactive, animated guides for first payment/staking.
+
+Contextual help: Inline FAQs and support chat everywhere, à la Brex.
+
+Use micro-animations for yield growth (animated numbers).
+
+Native dark mode.
+
+Include customizable avatar/branding for freelancers to present to their clients.
+
