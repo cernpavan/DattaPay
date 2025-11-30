@@ -76,23 +76,29 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-48 overflow-visible">
+        {/* Massive Vibrant Background Mesh - Connecting Text and Visual */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-20 pointer-events-none">
+           <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] bg-gradient-to-br from-accent/20 via-primary/20 to-purple-500/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-pulse" style={{ animationDuration: '10s' }} />
+           <div className="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-gradient-to-tr from-blue-400/20 via-teal-300/20 to-transparent rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen" />
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-10 mb-20">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-10 mb-12">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-secondary-foreground text-xs font-medium shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 dark:bg-white/10 border border-primary/20 text-primary text-xs font-bold shadow-sm backdrop-blur-md">
                 <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                 New: Instant stablecoin on-ramp
               </div>
               
               {/* Exact Copy from Prompt */}
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] text-balance text-foreground">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] text-balance text-foreground drop-shadow-sm">
                 Empowering freelancers. <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary to-accent">Receive, grow, and spend.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary via-blue-600 to-accent pb-2">Receive, grow, and spend.</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light text-balance">
@@ -108,25 +114,25 @@ export default function LandingPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center w-full"
             >
               <Link href="/dashboard">
-                <Button size="lg" className="h-14 px-8 rounded-full text-base shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 bg-primary text-white border-none font-semibold">
+                <Button size="lg" className="h-14 px-8 rounded-full text-base shadow-xl shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300 bg-primary text-white border-none font-semibold ring-2 ring-white/20 ring-offset-2 ring-offset-background">
                   Start Earning Yield 
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-base border-border bg-background/50 hover:bg-background hover:border-primary/30 text-foreground backdrop-blur-sm transition-all">
+              <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-base border-2 border-primary/10 bg-white/50 hover:bg-white hover:border-primary/30 text-foreground backdrop-blur-md transition-all shadow-sm">
                 View Demo
               </Button>
             </motion.div>
 
-            <div className="flex items-center justify-center gap-8 text-sm font-medium text-muted-foreground pt-4">
+            <div className="flex items-center justify-center gap-8 text-sm font-semibold text-foreground/80 pt-4 bg-white/30 dark:bg-black/20 px-6 py-2 rounded-full backdrop-blur-sm border border-white/20 shadow-sm">
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" /> Flat 0.5% Fee
+                <div className="bg-green-500/20 p-1 rounded-full text-green-600"><Check className="h-3 w-3" /></div> Flat 0.5% Fee
               </div>
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" /> Instant Settlement
+                <div className="bg-green-500/20 p-1 rounded-full text-green-600"><Check className="h-3 w-3" /></div> Instant Settlement
               </div>
               <div className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-primary" /> Bank-grade Security
+                <div className="bg-green-500/20 p-1 rounded-full text-green-600"><Check className="h-3 w-3" /></div> Bank-grade Security
               </div>
             </div>
           </div>
@@ -134,13 +140,15 @@ export default function LandingPage() {
           {/* Product Visual - Stripe-like 3D Tilted Interface */}
           <motion.div 
             style={{ y, opacity }}
-            className="relative max-w-6xl mx-auto mt-20 perspective-1000"
+            className="relative max-w-6xl mx-auto mt-16 perspective-1000"
           >
+            {/* Solid Backdrop Canvas - The "Desk" */}
+            <div className="absolute inset-x-[-50vw] top-[20%] bottom-[-50%] bg-gradient-to-b from-gray-50/0 via-gray-50/80 to-white dark:from-transparent dark:to-background -z-10 transform -skew-y-3 pointer-events-none" />
+
             {/* Vibrant Gradient Mesh Background - Stripe Style */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 opacity-40 pointer-events-none">
-              <div className="absolute top-0 left-0 w-full h-full bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#5046e6_50%,#E2E8F0_100%)] blur-3xl opacity-30 animate-slow-spin" />
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-[100px] mix-blend-multiply" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[100px] mix-blend-multiply" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] -z-10 opacity-100 pointer-events-none">
+               <div className="absolute top-[-20%] left-[10%] w-[600px] h-[600px] bg-[#635BFF]/20 rounded-full blur-[80px] mix-blend-multiply dark:mix-blend-screen animate-pulse" />
+               <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-[#21808D]/20 rounded-full blur-[80px] mix-blend-multiply dark:mix-blend-screen" />
             </div>
 
             {/* Main Dashboard Container */}
