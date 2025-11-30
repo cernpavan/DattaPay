@@ -88,9 +88,19 @@ export default function LandingPage() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary bg-300% animate-gradient">Local yield.</span>
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl text-balance font-light">
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl text-balance font-light mb-8">
                   The first financial stack designed for the borderless economy. Receive USD & EUR, convert to stablecoins, and earn <span className="font-semibold text-foreground decoration-green-500/30 underline decoration-2 underline-offset-4">4.2% APY</span> instantly.
                 </p>
+
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 border border-border/50 backdrop-blur-sm max-w-md mb-8">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary font-bold text-sm">
+                    0.5%
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-foreground">Flat Universal Fee</div>
+                    <div className="text-sm text-muted-foreground">No hidden costs. Just 0.5% on payouts.</div>
+                  </div>
+                </div>
               </motion.div>
               
               <motion.div 
@@ -255,7 +265,7 @@ export default function LandingPage() {
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Everything you need to <span className="text-primary">scale globally.</span></h2>
             <p className="text-xl text-muted-foreground">
-              Stop worrying about exchange rates and bank fees. We've built the financial infrastructure for the modern internet economy.
+              Stop losing money to exchange fees and inflation. Switch to the financial stack designed for borderless work.
             </p>
           </div>
 
