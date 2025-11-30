@@ -131,52 +131,175 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Product Visual - "Hero Balance Card" & "Yield Graph" from instructions */}
+          {/* Product Visual - Stripe-like 3D Tilted Interface */}
           <motion.div 
             style={{ y, opacity }}
-            className="relative max-w-5xl mx-auto perspective-1000"
+            className="relative max-w-6xl mx-auto mt-20 perspective-1000"
           >
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-accent/10 to-transparent blur-[100px] -z-10 rounded-full opacity-60" />
-            
-            <div className="relative bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-white/40 dark:border-white/10 rounded-[2rem] p-2 shadow-2xl ring-1 ring-black/5 transform rotate-x-[5deg] transition-transform duration-700 hover:rotate-x-0">
-              <div className="bg-background/80 dark:bg-card/80 backdrop-blur-sm rounded-[1.5rem] border border-border/50 overflow-hidden p-6 md:p-8 grid md:grid-cols-3 gap-6">
-                {/* Reusing Actual Dashboard Components for Authenticity */}
-                <div className="md:col-span-2 space-y-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-lg">Overview</h3>
-                    <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium flex items-center gap-1">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse" />
-                      Live System
+            {/* Vibrant Gradient Mesh Background - Stripe Style */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 opacity-40 pointer-events-none">
+              <div className="absolute top-0 left-0 w-full h-full bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#5046e6_50%,#E2E8F0_100%)] blur-3xl opacity-30 animate-slow-spin" />
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-[100px] mix-blend-multiply" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[100px] mix-blend-multiply" />
+            </div>
+
+            {/* Main Dashboard Container */}
+            <div className="relative transform rotate-x-[5deg] rotate-y-[-2deg] hover:rotate-x-0 hover:rotate-y-0 transition-transform duration-700 ease-out preserve-3d group">
+              {/* Phone Mockup - Floating Left */}
+              <motion.div 
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="absolute -left-12 bottom-12 w-72 z-20 hidden lg:block"
+              >
+                <div className="rounded-[2.5rem] bg-background border-[8px] border-gray-900 shadow-2xl overflow-hidden">
+                  <div className="bg-background p-6 space-y-6 h-[500px]">
+                    <div className="flex justify-between items-center">
+                      <div className="h-8 w-8 rounded-full bg-secondary" />
+                      <div className="h-1 w-12 rounded-full bg-secondary" />
                     </div>
-                  </div>
-                  <BalanceCard />
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl border bg-card">
-                      <div className="text-sm text-muted-foreground mb-1">Yield Earned</div>
-                      <div className="text-2xl font-bold text-green-600">+$423.15</div>
+                    <div className="space-y-2">
+                      <div className="text-sm text-muted-foreground">Balance</div>
+                      <div className="text-3xl font-bold">$4,250.00</div>
+                      <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-bold">
+                        +4.2% APY
+                      </div>
                     </div>
-                    <div className="p-4 rounded-xl border bg-card">
-                      <div className="text-sm text-muted-foreground mb-1">Next Payout</div>
-                      <div className="text-2xl font-bold">Tomorrow</div>
+                    <div className="space-y-3">
+                      {[1, 2, 3].map((i) => (
+                        <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50">
+                          <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-xl shadow-sm">
+                            {i === 1 ? "🇪🇺" : i === 2 ? "🇺🇸" : "💸"}
+                          </div>
+                          <div className="flex-1">
+                            <div className="h-2 w-20 bg-gray-200 rounded mb-1" />
+                            <div className="h-2 w-12 bg-gray-200 rounded" />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-auto pt-8">
+                      <Button className="w-full rounded-full shadow-lg bg-primary text-white">Send Money</Button>
                     </div>
                   </div>
                 </div>
-                <div className="md:col-span-1 space-y-6">
-                   <YieldChart />
-                   <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <Zap className="h-4 w-4" />
-                        </div>
-                        <div className="text-sm font-semibold">Auto-Staking</div>
+              </motion.div>
+
+              {/* Desktop Dashboard Mockup */}
+              <div className="rounded-xl bg-white dark:bg-gray-900 border border-black/5 dark:border-white/10 shadow-2xl overflow-hidden ring-1 ring-black/5">
+                {/* Browser Chrome */}
+                <div className="h-10 bg-gray-50 dark:bg-gray-800 border-b flex items-center px-4 gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400/80" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
+                    <div className="w-3 h-3 rounded-full bg-green-400/80" />
+                  </div>
+                  <div className="ml-4 flex-1 flex justify-center">
+                    <div className="h-5 w-64 bg-gray-200 dark:bg-gray-700 rounded-md opacity-50" />
+                  </div>
+                </div>
+
+                {/* Actual Dashboard Content */}
+                <div className="p-8 grid md:grid-cols-3 gap-8 bg-background">
+                  <div className="md:col-span-2 space-y-8">
+                    <div className="flex items-center justify-between">
+                      <div>
+                         <h3 className="text-2xl font-bold tracking-tight">Dashboard</h3>
+                         <p className="text-muted-foreground">Welcome back, Alex</p>
                       </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        Funds are automatically converted to USDC and staked in Aave protocols for maximum yield.
-                      </p>
-                   </div>
+                      <Button variant="outline" className="rounded-full">
+                        <CreditCard className="mr-2 h-4 w-4" /> Cards
+                      </Button>
+                    </div>
+                    
+                    <BalanceCard />
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-5 rounded-2xl border bg-card hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-3 mb-3 text-muted-foreground">
+                          <TrendingUp className="h-4 w-4" />
+                          <span className="text-sm font-medium">Yield Earned</span>
+                        </div>
+                        <div className="text-2xl font-bold text-green-600">+$423.15</div>
+                        <div className="text-xs text-muted-foreground mt-1">+12% vs last month</div>
+                      </div>
+                      <div className="p-5 rounded-2xl border bg-card hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-3 mb-3 text-muted-foreground">
+                          <Wallet className="h-4 w-4" />
+                          <span className="text-sm font-medium">Next Payout</span>
+                        </div>
+                        <div className="text-2xl font-bold">Tomorrow</div>
+                        <div className="text-xs text-muted-foreground mt-1">Est. $1,250.00</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-1 space-y-6">
+                     <YieldChart />
+                     
+                     <div className="p-5 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/5 border border-primary/10">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
+                            <Zap className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <div className="font-bold text-sm">Auto-Staking</div>
+                            <div className="text-xs text-green-600 font-medium">Active • 4.2% APY</div>
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-xs">
+                            <span className="text-muted-foreground">Principal</span>
+                            <span className="font-medium">$12,500.00</span>
+                          </div>
+                          <div className="w-full bg-white rounded-full h-1.5 overflow-hidden">
+                            <div className="bg-primary h-full rounded-full w-[85%]" />
+                          </div>
+                          <div className="flex justify-between text-xs pt-1">
+                            <span className="text-muted-foreground">Projected (1y)</span>
+                            <span className="font-bold text-primary">+$525.00</span>
+                          </div>
+                        </div>
+                     </div>
+
+                     {/* Recent Activity Mini-List */}
+                     <div className="rounded-2xl border bg-card p-5">
+                       <h4 className="text-sm font-semibold mb-4">Recent Activity</h4>
+                       <div className="space-y-4">
+                         {[1, 2].map((i) => (
+                           <div key={i} className="flex items-center justify-between text-sm">
+                             <div className="flex items-center gap-3">
+                               <div className="h-8 w-8 rounded-full bg-secondary flex items-center justify-center">
+                                 {i === 1 ? "S" : "B"}
+                               </div>
+                               <div>
+                                 <div className="font-medium">{i === 1 ? "Stripe Inc" : "Brex"}</div>
+                                 <div className="text-xs text-muted-foreground">Today</div>
+                               </div>
+                             </div>
+                             <div className="font-medium text-green-600">+$2,400</div>
+                           </div>
+                         ))}
+                       </div>
+                     </div>
+                  </div>
                 </div>
               </div>
+
+              {/* Floating Notification Badge */}
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -right-8 top-20 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] border border-white/20 flex items-center gap-4 z-30 max-w-xs"
+              >
+                <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shadow-inner">
+                  <Check className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Payment Received</div>
+                  <div className="text-sm font-bold text-foreground">Funds converted to USDC</div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
