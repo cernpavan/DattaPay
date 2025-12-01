@@ -8,9 +8,9 @@ import { YieldChart } from "@/components/dashboard/YieldChart";   // Reuse the a
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function LandingPage() {
+  // Removed scroll-linked opacity which was causing the section to vanish too early
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]); // Reduced parallax movement
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden font-sans selection:bg-primary/20">
@@ -139,7 +139,10 @@ export default function LandingPage() {
 
           {/* Product Visual - Stripe-like 3D Tilted Interface */}
           <motion.div 
-            style={{ y, opacity }}
+            style={{ y }}
+            initial={{ opacity: 0, scale: 0.95, rotateX: 5 }}
+            animate={{ opacity: 1, scale: 1, rotateX: 5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             className="relative max-w-6xl mx-auto mt-16 perspective-1000"
           >
             {/* Solid Backdrop Canvas - The "Desk" */}
@@ -152,12 +155,12 @@ export default function LandingPage() {
             </div>
 
             {/* Main Dashboard Container */}
-            <div className="relative transform rotate-x-[5deg] rotate-y-[-2deg] hover:rotate-x-0 hover:rotate-y-0 transition-transform duration-700 ease-out preserve-3d group">
+            <div className="relative transform rotate-x-[5deg] rotate-y-[-2deg] hover:rotate-x-0 hover:rotate-y-0 transition-transform duration-1000 ease-out preserve-3d group">
               {/* Phone Mockup - Floating Left */}
               <motion.div 
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
+                initial={{ x: -50, opacity: 0, y: 20 }}
+                animate={{ x: 0, opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
                 className="absolute -left-12 bottom-12 w-72 z-20 hidden lg:block"
               >
                 <div className="rounded-[2.5rem] bg-background border-[8px] border-gray-900 shadow-2xl overflow-hidden">
