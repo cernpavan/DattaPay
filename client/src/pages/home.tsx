@@ -55,6 +55,11 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in-up">
+              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span className="text-xs font-medium text-muted-foreground">Founded by former Visa executives</span>
+            </div>
+
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
               Empowering freelancers & creators. <br className="hidden md:block" />
               <span className="text-muted-foreground">Receive, grow, and spend.</span>
@@ -80,7 +85,7 @@ export default function LandingPage() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mb-12">
               <Button 
                 onClick={() => setIsModalOpen(true)}
                 size="lg" 
@@ -95,15 +100,22 @@ export default function LandingPage() {
               </Link>
             </div>
             
-            <div className="mt-12 flex flex-col items-center gap-4 text-center">
-              <p className="text-sm font-medium text-muted-foreground">
-                Built by former Visa employees with 10+ years of fintech experience.
-              </p>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-secondary/20 text-xs font-medium text-muted-foreground">
-                <span>Powered by</span>
-                <span className="font-bold text-foreground">stripe</span>
-                <span>technology for payment orchestration</span>
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <div className="flex -space-x-2 mr-2">
+                 {/* Team Avatars Placeholder */}
+                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-300" />
+                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-400" />
+                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-500" />
               </div>
+              <span>Backed by 20+ years of fintech expertise.</span>
+            </div>
+             
+            <div className="mt-6 pt-6 border-t border-border/40 max-w-md mx-auto">
+               <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">Payments Orchestrated By</p>
+               <div className="flex items-center justify-center gap-2 opacity-80 grayscale hover:grayscale-0 transition-all">
+                 {/* Stripe Text Logo */}
+                 <span className="text-2xl font-bold text-[#635BFF] tracking-tight">stripe</span>
+               </div>
             </div>
           </div>
 
