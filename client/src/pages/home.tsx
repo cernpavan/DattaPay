@@ -1,13 +1,19 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Globe, Shield, Zap, LayoutDashboard, CreditCard, Wallet, TrendingUp, ChevronRight, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import { BalanceCard } from "@/components/dashboard/BalanceCard";
 import { YieldChart } from "@/components/dashboard/YieldChart";
+import { LeadCaptureModal } from "@/components/LeadCaptureModal";
 
 export default function LandingPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
+      <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       {/* Navbar */}
       <nav className="sticky top-0 z-50 w-full border-b border-black/5 dark:border-white/10 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -30,11 +36,13 @@ export default function LandingPage() {
             <Link href="/dashboard">
               <a className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden sm:block">Log in</a>
             </Link>
-            <Link href="/dashboard">
-              <Button size="sm" className="rounded-full px-4 h-9 font-medium bg-primary text-white hover:bg-primary/90 shadow-sm">
-                Get Started
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => setIsModalOpen(true)}
+              size="sm" 
+              className="rounded-full px-4 h-9 font-medium bg-primary text-white hover:bg-primary/90 shadow-sm"
+            >
+              Get Started
+            </Button>
           </div>
         </div>
       </nav>
@@ -43,10 +51,6 @@ export default function LandingPage() {
       <section className="pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium mb-6 border border-border/50">
-              <span className="flex h-1.5 w-1.5 rounded-full bg-green-500"></span>
-              Now available in Nigeria, Brazil, and Argentina
-            </div>
             
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
               Empowering freelancers & creators. <br className="hidden md:block" />
@@ -70,11 +74,13 @@ export default function LandingPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
-              <Link href="/dashboard">
-                <Button size="lg" className="h-12 px-8 rounded-full text-base bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
-                  Start accepting payments
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => setIsModalOpen(true)}
+                size="lg" 
+                className="h-12 px-8 rounded-full text-base bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+              >
+                Start accepting payments
+              </Button>
               <Link href="/dashboard">
                 <a className="text-sm font-medium text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors group">
                   View live demo <ChevronRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -195,7 +201,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Traditional Banks */}
             <div className="p-8 rounded-2xl border border-border bg-gray-50 dark:bg-gray-900/50 opacity-75">
-              <div className="text-lg font-semibold text-muted-foreground mb-6">Traditional Banks</div>
+              <div className="text-lg font-semibold text-muted-foreground mb-6">PayPal, Payoneer & traditional methods</div>
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Exchange Rate Markup</span>
@@ -332,11 +338,13 @@ export default function LandingPage() {
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
             Join thousands of freelancers saving on fees and earning yield.
           </p>
-          <Link href="/dashboard">
-            <Button size="lg" className="h-14 px-10 rounded-full text-lg bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
-              Create free account
-            </Button>
-          </Link>
+          <Button 
+            onClick={() => setIsModalOpen(true)}
+            size="lg" 
+            className="h-14 px-10 rounded-full text-lg bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+          >
+            Create free account
+          </Button>
           <p className="mt-6 text-xs text-muted-foreground">
             No credit card required. tailored for non-US residents.
           </p>
