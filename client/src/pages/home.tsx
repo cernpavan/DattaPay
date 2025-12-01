@@ -321,7 +321,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm font-bold text-muted-foreground/60 tracking-widest uppercase mb-10">Trusted by global teams at</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {['Stripe', 'Brex', 'Deel', 'Remote', 'Figma', 'Linear'].map((brand) => (
+            {['Upwork', 'Fiverr', 'Deel'].map((brand) => (
               <span key={brand} className="text-2xl md:text-3xl font-bold font-mono text-foreground tracking-tight hover:text-primary transition-colors cursor-default">{brand}</span>
             ))}
           </div>
