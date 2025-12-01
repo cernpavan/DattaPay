@@ -97,7 +97,7 @@ export default function LandingPage() {
               
               {/* Exact Copy from Prompt */}
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] text-balance text-foreground drop-shadow-sm">
-                Empowering freelancers. <br/>
+                Empowering freelancers & creators. <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary via-blue-600 to-accent pb-2">Receive, grow, and spend.</span>
               </h1>
               
@@ -500,7 +500,6 @@ export default function LandingPage() {
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Overview</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Yield</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
               </ul>
             </div>
             
@@ -508,7 +507,6 @@ export default function LandingPage() {
               <h4 className="font-bold mb-6 text-sm uppercase tracking-wider text-foreground/80">Company</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
               </ul>
             </div>
@@ -517,7 +515,6 @@ export default function LandingPage() {
               <h4 className="font-bold mb-6 text-sm uppercase tracking-wider text-foreground/80">Legal</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Terms</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Licenses</a></li>
               </ul>
             </div>
