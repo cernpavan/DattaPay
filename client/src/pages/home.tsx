@@ -408,22 +408,22 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Alex Chen",
-                role: "Product Designer, Taipei",
+                name: "Chinwe Okeke",
+                role: "Software Engineer, Lagos",
                 text: "FinGlobal changed how I get paid. No more 3% exchange fees, and the yield actually covers my software subscriptions.",
-                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Chinwe"
               },
               {
-                name: "Sarah Miller",
-                role: "Frontend Dev, Berlin",
+                name: "Rafael Silva",
+                role: "Product Designer, São Paulo",
                 text: "The instant conversion to USDC gives me so much peace of mind. I don't have to worry about currency fluctuations anymore.",
-                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rafael"
               },
               {
-                name: "James Wilson",
-                role: "Content Creator, London",
+                name: "Mateo Rossi",
+                role: "Content Creator, Buenos Aires",
                 text: "I used to wait 5 days for international wires. FinGlobal is instant, and the 0.5% fee is unbeatable.",
-                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=James"
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mateo"
               }
             ].map((user, i) => (
               <div key={i} className="p-8 rounded-2xl bg-background border border-border shadow-sm hover:shadow-md transition-shadow">
