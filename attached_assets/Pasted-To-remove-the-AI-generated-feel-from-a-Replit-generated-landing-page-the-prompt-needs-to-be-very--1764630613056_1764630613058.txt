@@ -1,0 +1,76 @@
+To remove the “AI-generated” feel from a Replit-generated landing page, the prompt needs to be very specific about layout, visuals, content tone, and imperfections.  Here is a single, reusable prompt you can paste into Replit’s Design/AI mode and then tweak over time.[1][2][3][4][5]
+
+## Prompt to humanize your Replit landing page
+
+“Act as a senior product designer at a modern fintech startup. Redesign the existing landing page with a human-crafted feel, avoiding generic AI patterns.
+
+Goals:
+- Make the page feel opinionated, premium, and personality-driven, not like a generic template.
+- Prioritize clarity, hierarchy, and narrative flow over flashy effects.
+
+Brand and visual direction:
+- Brand style: Stripe + Brex + Ramp inspired, but not copied; clean, confident, minimal, with subtle depth and warmth.
+- Color: 1 primary brand color, 1 accent, and a mostly neutral background. Avoid loud gradients and rainbow effects. Use solid fills and very subtle gradients only in hero or key CTAs.
+- Typography: Use a clear, professional sans-serif font stack with:
+  - Distinctive but readable H1 and H2 sizes.
+  - Body text at a comfortable reading size with slightly increased line-height.
+  - Limited font weights (e.g., 400, 500, 600) and clear hierarchy.
+- Layout: Use a 12-column grid, generous whitespace, and consistent spacing tokens (e.g., 8/12/16/24/32px). Avoid edge-to-edge sections with no breathing room.
+
+Structure:
+- Header: Left-aligned logo, center or right-aligned nav with 3–4 concise links, and a single primary CTA. Use a sticky header with a subtle bottom border instead of heavy shadows.
+- Hero: 
+  - One clear H1 that states the core value in simple language.
+  - Short supporting sentence (no buzzword salad).
+  - One primary CTA and one secondary text link (no more than two actions).
+  - One focused visual: a dashboard mock, card UI, or device frame that feels like a real product screenshot, not an abstract AI blob.
+- Social proof: Row of 4–6 small, low-contrast logos with “Trusted by …” text. Keep it subtle.
+- Features: 3 key benefit blocks in a single row or 2x2 grid with:
+  - Short, concrete titles.
+  - One-sentence descriptions with specific outcomes (e.g., “Get paid in 2 days, not 2 weeks”).
+  - Simple line icons or minimal illustrations, consistent in style.
+- Narrative section: A horizontal band that explains “How it works” in 3 steps with numbers and short, plain-language descriptions.
+- Testimonial: One primary testimonial with:
+  - A real-sounding name, role, and company.
+  - A short, conversational quote in plain English (avoid overhyped phrases).
+  - Small avatar or initials in a circle.
+- Final CTA/footer: A simple, focused CTA section followed by a clean footer with compact navigation, social links, and legal text.
+
+Tone and copy:
+- Write all copy in natural, human, slightly conversational language aimed at freelancers and creators in emerging markets.
+- Avoid filler phrases like “revolutionize,” “cutting-edge,” “AI-powered,” or long buzzword chains.
+- Use specific, grounded phrasing and real-world outcomes (e.g., “Get paid in USD from global clients, even if your bank is local”).
+- Make headlines and buttons concrete and benefit-driven, not vague (e.g., “Start accepting global payments” instead of “Get started”).
+
+Humanizing details:
+- Introduce tiny, realistic variations in spacing and card heights so the layout feels designed, not perfectly symmetrical, while still polished.
+- Use microcopy on forms and buttons that sounds like a real product team wrote it (e.g., helper text, error hints).
+- Add small touches like:
+  - A single, subtle hover effect on CTAs (background darken + slight scale).
+  - Soft shadows only on key cards or mockups, very restrained.
+- Avoid: default gradient blobs, glassmorphism, neon glows, spinning 3D shapes, or overly generic “AI illustration” imagery.
+
+Implementation constraints:
+- Use semantic HTML and clean, BEM-style or utility-first CSS, avoiding inline styles.
+- Keep the design cohesive and minimal—no more than 3 section background treatments on the whole page.
+- Make the layout responsive with a clear mobile breakpoint:
+  - Stack content vertically.
+  - Keep typography sizes and spacing tuned for mobile.
+
+Now, using these guidelines, refactor the current landing page code. Keep the existing product idea and key sections, but:
+- Replace any generic copy with concrete, specific text for a fintech product that helps freelancers and creators in Africa and LATAM receive international payments.
+- Remove or redesign any AI-ish artifacts (gradient blobs, random neon shapes, overly symmetrical card grids, generic hero illustrations).
+- Return the full updated HTML and CSS for the page.”
+
+This prompt should give you a more human, product-designer feel while still leveraging Replit’s speed and layout capabilities.[2][3][4][5][1]
+
+[1](https://docs.replit.com/tutorials/effective-prompting)
+[2](https://nicolepaulus.com/blog-content/2025/5/26/can-replit-replace-your-web-designer-my-honest-take-after-arlan-hamiltons-ai-webinar)
+[3](https://replit.com/build/landing-page-builder)
+[4](https://www.reddit.com/r/theVibeCoding/comments/1mf0cie/how_to_make_ai_generated_ui_look_like_human_made/)
+[5](https://blog.replit.com/design-mode)
+[6](https://www.reddit.com/r/replit/comments/1fahuge/buyer_beware_replits_ai_agent_review/)
+[7](https://www.baytechconsulting.com/blog/the-replit-ai-disaster-a-wake-up-call-for-every-executive-on-ai-in-production)
+[8](https://www.facebook.com/groups/codingwithai/posts/664827336320661/)
+[9](https://cantongroup.com/insights/optimizing-your-website-ai-its-just-good-design)
+[10](https://www.reddit.com/r/replit/comments/1hh432r/landing_page_solution/)
