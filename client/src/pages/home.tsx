@@ -74,6 +74,10 @@ export default function LandingPage() {
                 <Shield className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">Bank-grade Security</span>
               </div>
+              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
+                <Globe className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">Registered MSB with FinCEN</span>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
@@ -90,11 +94,21 @@ export default function LandingPage() {
                 </a>
               </Link>
             </div>
+            
+            <div className="mt-12 flex flex-col items-center gap-4 text-center">
+              <p className="text-sm font-medium text-muted-foreground">
+                Built by former Visa employees with 10+ years of fintech experience.
+              </p>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-secondary/20 text-xs font-medium text-muted-foreground">
+                <span>Powered by</span>
+                <span className="font-bold text-foreground">stripe</span>
+                <span>technology for payment orchestration</span>
+              </div>
+            </div>
           </div>
 
           {/* Hero Visual - Focused Product Shot */}
           <div className="relative max-w-5xl mx-auto">
-            {/* Removed Gradient Blob */}
             
             <div className="rounded-xl border border-border bg-white dark:bg-gray-900 shadow-xl overflow-hidden">
               {/* Browser Bar */}
@@ -312,24 +326,63 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Single Strong Testimonial */}
-      <section className="py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-primary/5 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-primary opacity-50" />
-            <Quote className="h-12 w-12 text-primary/20 mx-auto mb-8" />
-            <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed mb-10 text-foreground">
-              "I used to lose almost 5% of my income to exchange fees and wait days for wire transfers. With DattaPay, I get paid instantly in USDC and actually earn interest on my savings. It's a game changer for freelancers in Argentina."
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-gray-200 overflow-hidden">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mateo" alt="Mateo" className="h-full w-full object-cover" />
+      {/* Testimonials Scrollable */}
+      <section className="py-24 border-y border-border/50 bg-secondary/10 overflow-hidden">
+        <div className="container mx-auto px-6 mb-12">
+          <h2 className="text-3xl font-bold tracking-tight text-center mb-4">Loved by global creators</h2>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+            Join thousands of freelancers from emerging markets who trust DattaPay.
+          </p>
+        </div>
+        
+        <div className="flex gap-6 overflow-x-auto pb-8 px-6 snap-x snap-mandatory scrollbar-hide max-w-[100vw]">
+          <div className="flex gap-6 animate-scroll hover:pause min-w-full">
+            {[
+              {
+                text: "I used to lose almost 5% of my income to exchange fees. With DattaPay, I get paid instantly in USDC and actually earn interest. It's a life saver.",
+                name: "Mateo Rossi",
+                role: "Senior Product Designer, Buenos Aires",
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mateo"
+              },
+              {
+                text: "Finally a service that understands freelancers in Nigeria. The instant settlement to crypto means I don't have to worry about currency devaluation.",
+                name: "Adaobi Nnadi",
+                role: "Software Engineer, Lagos",
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Adaobi"
+              },
+              {
+                text: "The 0.5% flat fee is unbeatable. PayPal was taking a huge chunk of my earnings. DattaPay is transparent and fast.",
+                name: "Carlos Mendez",
+                role: "Digital Artist, Mexico City",
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos"
+              },
+              {
+                text: "I can finally receive payments from US clients without the headache of wire transfers. The auto-yield feature is just the cherry on top.",
+                name: "Priya Sharma",
+                role: "Content Writer, Mumbai",
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya"
+              },
+              {
+                text: "Setting up was incredibly easy. I got my US account details in minutes and received my first payment the same day.",
+                name: "Kofi Mensah",
+                role: "Web Developer, Accra",
+                image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Kofi"
+              }
+            ].map((testimonial, i) => (
+              <div key={i} className="flex-shrink-0 w-[350px] md:w-[400px] p-8 rounded-2xl bg-background border border-border shadow-sm snap-center">
+                <Quote className="h-8 w-8 text-primary/20 mb-6" />
+                <p className="text-lg leading-relaxed mb-6 text-foreground/90 font-medium">"{testimonial.text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-secondary overflow-hidden border border-border">
+                    <img src={testimonial.image} alt={testimonial.name} className="h-full w-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-sm text-foreground">{testimonial.name}</div>
+                    <div className="text-xs text-muted-foreground">{testimonial.role}</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-left">
-                <div className="font-bold text-foreground">Mateo Rossi</div>
-                <div className="text-sm text-muted-foreground">Senior Product Designer, Buenos Aires</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -371,12 +424,7 @@ export default function LandingPage() {
           
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="https://complyremit.com/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
-            <button 
-              onClick={() => setIsLicensesOpen(true)}
-              className="hover:text-foreground transition-colors"
-            >
-              Licenses
-            </button>
+            {/* Removed Licenses link from footer as per request, moved content to hero */}
             <button 
               onClick={() => setIsModalOpen(true)}
               className="hover:text-foreground transition-colors"
