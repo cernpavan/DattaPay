@@ -52,10 +52,10 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-mono: 'JetBrains Mono', monospace;
   
-  --radius: 0.5rem;
+  --radius: 0.25rem; /* 4px for Stripe-like feel */
   
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -63,112 +63,112 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-glow: 0 0 20px hsl(var(--primary) / 0.2);
+  /* Removed glow shadow */
 }
 
-/* LIGHT MODE - Premium Fintech Palette */
+/* LIGHT MODE - Stripe Inspired Palette */
 :root {
   /* Base */
-  --background: 210 40% 98%; /* Very subtle cool grey/white */
-  --foreground: 222 47% 11%; /* Deep rich blue-grey */
+  --background: 0 0% 100%; /* Pure white */
+  --foreground: 240 10% 3.9%; /* #0a2540 Deep Navy/Black */
 
   /* Card - Clean White */
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 240 10% 3.9%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
+  --popover-foreground: 240 10% 3.9%;
 
-  /* Primary - Stripe Blue #635BFF */
-  --primary: 243 100% 68%;
+  /* Primary - Stripe Blurple #635BFF */
+  --primary: 243 100% 68%; 
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary - Soft neutral for secondary actions */
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222 47% 11%;
+  /* Secondary - Slate Gray for secondary actions */
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
 
   /* Muted - Subtext */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
 
-  /* Accent - Circle Teal #21808D (Used for highlights/success/interactive) */
-  --accent: 187 62% 34%;
-  --accent-foreground: 0 0% 100%;
+  /* Accent - Using the Blurple or a lighter variant */
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
 
-  /* Destructive - Error Red #FF5459 */
-  --destructive: 358 100% 66%;
-  --destructive-foreground: 0 0% 100%;
+  /* Destructive - Error Red */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
 
-  /* Borders */
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
+  /* Borders - Subtle Gray */
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
   --ring: 243 100% 68%;
 
   /* Charts */
-  --chart-1: 243 100% 68%; /* Primary Blue */
-  --chart-2: 187 62% 34%;  /* Teal */
-  --chart-3: 167 71% 46%;  /* Soft Green for Yield */
-  --chart-4: 43 96% 64%;   /* Warning/Pending */
-  --chart-5: 358 100% 66%; /* Error */
+  --chart-1: 243 100% 68%; 
+  --chart-2: 173 58% 39%;  
+  --chart-3: 197 37% 24%;  
+  --chart-4: 43 74% 66%;   
+  --chart-5: 27 87% 67%; 
 
-  /* Sidebar - Slightly distinct from background */
-  --sidebar: 0 0% 100%;
-  --sidebar-foreground: 222 47% 11%;
-  --sidebar-primary: 243 100% 68%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 210 40% 96.1%;
-  --sidebar-accent-foreground: 222 47% 11%;
-  --sidebar-border: 214 32% 91%;
-  --sidebar-ring: 243 100% 68%;
+  /* Sidebar */
+  --sidebar: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217 91.2% 59.8%;
   
-  --radius: 0.75rem; /* 12px for a modern soft feel */
+  --radius: 0.5rem; 
 }
 
 .dark {
   /* Base - Dark Blue/Grey Mode */
-  --background: 222 47% 11%;
+  --background: 224 71% 4%; /* #02040a */
   --foreground: 210 40% 98%;
 
-  --card: 222 47% 13%;
+  --card: 224 71% 4%;
   --card-foreground: 210 40% 98%;
 
-  --popover: 222 47% 13%;
+  --popover: 224 71% 4%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 243 100% 68%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 263.4 70% 50.4%;
+  --primary-foreground: 210 40% 98%;
 
-  --secondary: 217 33% 17%;
+  --secondary: 215 27.9% 16.9%;
   --secondary-foreground: 210 40% 98%;
 
-  --muted: 217 33% 17%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
 
-  --accent: 187 62% 34%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 215 27.9% 16.9%;
+  --accent-foreground: 210 40% 98%;
 
-  --destructive: 0 62% 30%;
+  --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217 33% 17%;
-  --input: 217 33% 17%;
-  --ring: 243 100% 68%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 263.4 70% 50.4%;
 
-  --chart-1: 243 100% 68%;
-  --chart-2: 187 62% 34%;
-  --chart-3: 167 71% 46%;
-  --chart-4: 43 96% 64%;
-  --chart-5: 358 100% 66%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
 
-  --sidebar: 222 47% 13%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 243 100% 68%;
+  --sidebar: 224 71% 4%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 217 33% 17%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 217 33% 17%;
-  --sidebar-ring: 243 100% 68%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
 @layer base {
@@ -181,39 +181,13 @@
 }
 
 @layer utilities {
-  .glass {
-    @apply bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-white/20 shadow-sm;
-  }
+  /* Removed glass/gradient/scroll animations to follow "Zero AI aesthetics" */
   
-  .glass-card {
-    @apply bg-white/60 dark:bg-black/60 backdrop-blur-md border border-white/40 shadow-lg;
-  }
-
   .text-balance {
     text-wrap: balance;
   }
   
   .perspective-1000 {
     perspective: 1000px;
-  }
-
-  @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  .animate-gradient {
-    background-size: 300%;
-    animation: gradient 8s ease infinite;
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
   }
 }

@@ -6,13 +6,16 @@ import { motion } from "framer-motion";
 import { BalanceCard } from "@/components/dashboard/BalanceCard";
 import { YieldChart } from "@/components/dashboard/YieldChart";
 import { LeadCaptureModal } from "@/components/LeadCaptureModal";
+import { LicensesModal } from "@/components/LicensesModal";
 
 export default function LandingPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLicensesOpen, setIsLicensesOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <LicensesModal isOpen={isLicensesOpen} onClose={() => setIsLicensesOpen(false)} />
       
       {/* Navbar */}
       <nav className="sticky top-0 z-50 w-full border-b border-black/5 dark:border-white/10 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
@@ -48,7 +51,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
+      <section className="pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             
@@ -63,13 +66,13 @@ export default function LandingPage() {
 
             {/* Value Prop Highlight - 0.5% Fee */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
-              <div className="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-200 dark:border-green-900/50">
+              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
                 <Check className="h-4 w-4 text-green-600" />
-                <span className="text-sm font-bold text-green-700 dark:text-green-400">Flat 0.5% Fee</span>
+                <span className="text-sm font-medium text-foreground">Flat 0.5% Fee</span>
               </div>
-              <div className="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-900/50">
-                <Shield className="h-4 w-4 text-blue-600" />
-                <span className="text-sm font-bold text-blue-700 dark:text-blue-400">Bank-grade Security</span>
+              <div className="flex items-center gap-3 bg-secondary/30 px-4 py-2 rounded-full border border-border">
+                <Shield className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">Bank-grade Security</span>
               </div>
             </div>
             
@@ -91,15 +94,15 @@ export default function LandingPage() {
 
           {/* Hero Visual - Focused Product Shot */}
           <div className="relative max-w-5xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10 blur-3xl rounded-full opacity-50" />
+            {/* Removed Gradient Blob */}
             
-            <div className="rounded-xl border border-black/5 dark:border-white/10 bg-white dark:bg-gray-900 shadow-2xl overflow-hidden">
+            <div className="rounded-xl border border-border bg-white dark:bg-gray-900 shadow-xl overflow-hidden">
               {/* Browser Bar */}
               <div className="h-10 border-b bg-gray-50/50 dark:bg-gray-800/50 flex items-center px-4 gap-2">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-gray-300/80" />
-                  <div className="w-3 h-3 rounded-full bg-gray-300/80" />
-                  <div className="w-3 h-3 rounded-full bg-gray-300/80" />
+                  <div className="w-3 h-3 rounded-full bg-gray-200" />
+                  <div className="w-3 h-3 rounded-full bg-gray-200" />
+                  <div className="w-3 h-3 rounded-full bg-gray-200" />
                 </div>
                 <div className="ml-4 flex items-center gap-2 text-xs text-muted-foreground bg-white dark:bg-gray-900 px-3 py-1 rounded-md border shadow-sm">
                   <Shield className="h-3 w-3" />
@@ -367,9 +370,19 @@ export default function LandingPage() {
           </div>
           
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Licenses</a>
-            <a href="#" className="hover:text-foreground transition-colors">Support</a>
+            <a href="https://complyremit.com/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
+            <button 
+              onClick={() => setIsLicensesOpen(true)}
+              className="hover:text-foreground transition-colors"
+            >
+              Licenses
+            </button>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="hover:text-foreground transition-colors"
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </footer>
