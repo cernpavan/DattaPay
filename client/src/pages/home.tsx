@@ -54,7 +54,7 @@ export default function LandingPage() {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
-              Get paid in USD/EUR, instantly convert to stablecoins, and earn 4.2% APY on your idle funds. No hidden fees, just simple global payments.
+              Get paid in USD/EUR, instantly convert to stablecoins, and earn <span className="text-foreground font-semibold">4.2% APY</span> on your idle funds. No hidden fees, just simple global payments.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
@@ -161,12 +161,12 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-12 border-y border-black/5 bg-gray-50/50 dark:bg-white/5">
+      <section className="py-12 border-y border-black/5 bg-gray-50/80 dark:bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-8">Trusted by global teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">Trusted by global teams at</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
             {['Upwork', 'Fiverr', 'Deel', 'Toptal', 'Freelancer'].map((brand) => (
-              <span key={brand} className="text-xl font-bold text-foreground/80">{brand}</span>
+              <span key={brand} className="text-xl md:text-2xl font-bold text-foreground/90">{brand}</span>
             ))}
           </div>
         </div>
@@ -175,9 +175,9 @@ export default function LandingPage() {
       {/* Features Grid */}
       <section id="features" className="py-24 md:py-32">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="space-y-4">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-2">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-4 p-8 rounded-2xl bg-secondary/20 border border-border/50 hover:border-primary/20 transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
                 <Globe className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold">Global Accounts</h3>
@@ -185,8 +185,8 @@ export default function LandingPage() {
                 Get your own US and Euro bank account details in seconds. Receive payments via ACH, Wire, or SEPA like a local.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-2">
+            <div className="space-y-4 p-8 rounded-2xl bg-secondary/20 border border-border/50 hover:border-primary/20 transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
                 <Shield className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold">Instant Settlement</h3>
@@ -194,13 +194,13 @@ export default function LandingPage() {
                 Funds are automatically converted to USDC/USDT at the mid-market rate. No hidden spread, no waiting days for clearance.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-2">
+            <div className="space-y-4 p-8 rounded-2xl bg-secondary/20 border border-border/50 hover:border-primary/20 transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4">
                 <TrendingUp className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold">Automated Yield</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Don't let your money sleep. Earn 4.2% APY on your balance automatically, paid out daily. Withdraw anytime.
+                Don't let your money sleep. Earn <span className="text-foreground font-semibold">4.2% APY</span> on your balance automatically, paid out daily. Withdraw anytime.
               </p>
             </div>
           </div>
