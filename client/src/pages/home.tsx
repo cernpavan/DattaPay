@@ -313,20 +313,26 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Social Proof / Trust Signals */}
-      <section className="py-12 border-y border-border/50 bg-secondary/20">
+      {/* Social Proof / Trust Signals - Integrated seamlessly */}
+      <section className="pb-24 pt-0 relative z-10">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-8">TRUSTED BY FREELANCERS AT</p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {['Stripe', 'Brex', 'Deel', 'Remote', 'Figma'].map((brand) => (
-              <span key={brand} className="text-xl md:text-2xl font-bold font-mono text-foreground/80">{brand}</span>
+          <p className="text-sm font-bold text-muted-foreground/60 tracking-widest uppercase mb-10">Trusted by global teams at</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {['Stripe', 'Brex', 'Deel', 'Remote', 'Figma', 'Linear'].map((brand) => (
+              <span key={brand} className="text-2xl md:text-3xl font-bold font-mono text-foreground tracking-tight hover:text-primary transition-colors cursor-default">{brand}</span>
             ))}
           </div>
         </div>
       </section>
 
       {/* "Receive Payment Flow" - Explained as Value Prop */}
-      <section id="product" className="py-32 bg-background">
+      <section id="product" className="py-32 relative overflow-hidden">
+        {/* Background Decoration for Flow Section */}
+        <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-30 pointer-events-none">
+          <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px]" />
+        </div>
+
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-24">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Global payments, simplified.</h2>
