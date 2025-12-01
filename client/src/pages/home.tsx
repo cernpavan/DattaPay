@@ -49,7 +49,7 @@ export default function LandingPage() {
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
               </div>
-              <span className="text-foreground">FinGlobal</span>
+              <span className="text-foreground">DattaPay</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
@@ -397,7 +397,7 @@ export default function LandingPage() {
             <div className="max-w-2xl">
               <h2 className="text-4xl font-bold tracking-tight mb-4">Loved by global creators.</h2>
               <p className="text-lg text-muted-foreground">
-                Join 10,000+ freelancers who trust FinGlobal with their earnings.
+                Join 10,000+ freelancers who trust DattaPay with their earnings.
               </p>
             </div>
             <div className="flex gap-2">
@@ -410,7 +410,7 @@ export default function LandingPage() {
               {
                 name: "Chinwe Okeke",
                 role: "Software Engineer, Lagos",
-                text: "FinGlobal changed how I get paid. No more 3% exchange fees, and the yield actually covers my software subscriptions.",
+                text: "DattaPay changed how I get paid. No more 3% exchange fees, and the yield actually covers my software subscriptions.",
                 image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Chinwe"
               },
               {
@@ -422,7 +422,7 @@ export default function LandingPage() {
               {
                 name: "Mateo Rossi",
                 role: "Content Creator, Buenos Aires",
-                text: "I used to wait 5 days for international wires. FinGlobal is instant, and the 0.5% fee is unbeatable.",
+                text: "I used to wait 5 days for international wires. DattaPay is instant, and the 0.5% fee is unbeatable.",
                 image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mateo"
               }
             ].map((user, i) => (
@@ -482,7 +482,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-16">
             <div className="col-span-2 lg:col-span-2">
               <div className="flex items-center gap-2 font-bold text-2xl tracking-tight text-primary mb-6">
-                FinGlobal
+                DattaPay
               </div>
               <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
                 Empowering freelancers globally to receive, grow, and spend earnings without borders.
@@ -524,7 +524,7 @@ export default function LandingPage() {
           </div>
           
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div>© 2025 FinGlobal Inc. All rights reserved.</div>
+            <div>© 2025 DattaPay Inc. All rights reserved.</div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
               <span>All systems operational</span>
