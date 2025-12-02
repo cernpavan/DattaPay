@@ -57,7 +57,7 @@ export default function LandingPage() {
             
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in-up">
               <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-xs font-medium text-muted-foreground">Founded by former Visa executives</span>
+              <span className="text-xs font-medium text-muted-foreground">Founded by former Visa employees</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1]">
@@ -93,29 +93,23 @@ export default function LandingPage() {
               >
                 Start accepting payments
               </Button>
-              <Link href="/dashboard">
-                <a className="text-sm font-medium text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors group">
-                  View live demo <ChevronRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
-                </a>
-              </Link>
             </div>
             
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <div className="flex -space-x-2 mr-2">
-                 {/* Team Avatars Placeholder */}
-                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-300" />
-                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-400" />
-                 <div className="h-8 w-8 rounded-full border-2 border-background bg-gray-500" />
+            <div className="flex flex-col items-center justify-center gap-6 text-sm text-muted-foreground">
+              <p className="text-xs font-medium uppercase tracking-wider opacity-70">Built by experts from & powered by</p>
+              <div className="flex items-center justify-center gap-8 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+                 {/* Visa Logo */}
+                 <svg viewBox="0 0 320 100" className="h-8 w-auto fill-current">
+                   <path d="M128.93 10.686L85.696 99.449H61.75L95.188 10.686h33.742zM210.21 10.686L190.83 69.823l-5.99-30.08c-2.94-11.65-11.79-18.32-23.14-18.32H126l-.79 4.4c15.26 4.07 27.47 10.83 33.95 22.84l19.66 70.78h35.13l54.36-88.757H210.21zm100.57.62c-16.88 0-29.9 9.24-30.08 29.44-.17 20.69 18.29 22.5 32.23 29.44 6.78 3.4 9.07 5.65 9.04 8.87-.11 4.74-5.68 6.94-10.97 6.94-16.05 0-24.83-6.09-28.84-10.35l-5.37 7.87c5.37 6.57 18.77 13.4 31.79 13.58 28.35 0 41.54-14.05 41.75-35.53.16-17.4-10.6-25.22-32.02-30.05-6.84-1.7-11.03-4.17-11.03-8.01 0-2.7 3.05-5.5 9.63-5.5 11.65-.2 20.09 3.78 23.14 7.36l4.95-7.25c-6.73-7.81-16.05-16.81-34.22-16.81zm-191.2 0C86.398 11.306 56.484 39.086 45.95 67.218L39 33.698C32.18 17.67 17.57 12.692.64 11.822L0 14.758c6.47 1.48 13.98 3.8 18.48 9.13 6.16 7.99 6.13 10.27 9.08 21.98l15.42 59.21h36.84l55.79-94.392H119.58z"/>
+                 </svg>
+                 
+                 <div className="h-8 w-px bg-border/50"></div>
+                 
+                 {/* Stripe Logo */}
+                 <svg viewBox="0 0 64 26" className="h-8 w-auto fill-current">
+                   <path d="M63.91 10.15h-5.5v15.71h5.5V10.15zm-2.75-8.91c1.8 0 2.98 1.2 2.98 2.9 0 1.72-1.18 2.92-2.98 2.92-1.78 0-2.98-1.2-2.98-2.92 0-1.7 1.2-2.9 2.98-2.9zM50.1 10.15h-5.34v1.72c1.32-1.6 3.26-1.96 5.02-1.7l-.02 5.46c-2.46-.3-4.52.44-5.16 2.26v7.82h-5.5V10.15h5.5v1.88c1.02-1.4 2.76-2.1 5.5-1.88M35.84 20.57c0 1.66-1.38 2.56-3.48 2.56-1.56 0-2.98-.58-3.94-1.34l-1 3.84c1.24.86 3.16 1.36 5.26 1.36 5.36 0 8.66-2.7 8.66-8.2V10.15h-5.34v1.44c-1.08-1.38-2.98-1.96-5.32-1.96-4.94 0-8.72 3.98-8.72 9.4s3.72 9.4 8.68 9.4c2.26 0 4.18-.72 5.2-2.22v-5.64zm-3.48-7.26c2.22 0 4.02 1.7 4.02 4.84s-1.8 4.84-4.02 4.84c-2.2 0-4.02-1.7-4.02-4.84s1.82-4.84 4.02-4.84zM17.38 10.15H12.1v15.71h5.28V10.15zm-2.64-8.91c1.78 0 2.98 1.2 2.98 2.9 0 1.72-1.2 2.92-2.98 2.92-1.8 0-2.98-1.2-2.98-2.92 0-1.7 1.18-2.9 2.98-2.9zM10.42 15.09c0-2.7-1.4-4.28-4.06-4.28-1.48 0-2.76.58-3.66 1.36l-.96-3.74C3.08 7.57 5.06 7.05 6.64 7.05c5.6 0 9.06 3.3 9.06 9.28v9.52H10.5v-1.6c-1.04 1.48-2.94 2.18-5.24 2.18-4.04 0-6.58-2.46-6.58-5.84 0-3.76 3.08-5.94 7.84-5.94 1.38 0 2.7.22 3.9.44zm-3.9 7.28c1.58 0 2.9-.6 3.9-1.66v-2.4c-1.08-.24-2.26-.4-3.48-.4-2.02 0-3.04.8-3.04 2.1 0 1.24.9 2.36 2.62 2.36zM39.32 4.69V1.45L34.06 0v4.69h-3.14v3.88h3.14v8.74c0 3.5 2.02 5.2 5.86 4.92 1.16-.08 2.06-.34 2.66-.62l-.64-3.86c-.28.12-.74.22-1.26.26-1.46.1-1.96-.68-1.96-2.12v-7.32h3.72V8.57h-3.12z"/>
+                 </svg>
               </div>
-              <span>Backed by 20+ years of fintech expertise.</span>
-            </div>
-             
-            <div className="mt-6 pt-6 border-t border-border/40 max-w-md mx-auto">
-               <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider font-semibold">Payments Orchestrated By</p>
-               <div className="flex items-center justify-center gap-2 opacity-80 grayscale hover:grayscale-0 transition-all">
-                 {/* Stripe Text Logo */}
-                 <span className="text-2xl font-bold text-[#635BFF] tracking-tight">stripe</span>
-               </div>
             </div>
           </div>
 
