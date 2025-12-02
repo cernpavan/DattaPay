@@ -56,8 +56,8 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16">
             
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in-up">
-              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border mb-8">
+              <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
               <span className="text-xs font-medium text-muted-foreground">Founded by former Visa employees</span>
             </div>
 
