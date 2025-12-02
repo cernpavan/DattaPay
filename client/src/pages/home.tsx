@@ -37,9 +37,6 @@ export default function LandingPage() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/dashboard">
-              <a className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden sm:block">Log in</a>
-            </Link>
             <Button 
               onClick={() => setIsModalOpen(true)}
               size="sm" 
@@ -218,7 +215,7 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison / Value Prop Section */}
-      <section className="py-24 bg-white dark:bg-black/5">
+      <section id="pricing" className="py-24 bg-white dark:bg-black/5">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Keep more of what you earn</h2>
