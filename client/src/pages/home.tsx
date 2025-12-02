@@ -96,23 +96,22 @@ export default function LandingPage() {
               </Button>
             </div>
             
-            <div className="flex flex-col items-center justify-center gap-6 text-sm text-muted-foreground">
-              <p className="text-xs font-medium uppercase tracking-wider opacity-70">Built by experts from & powered by</p>
-              <div className="flex items-center justify-center gap-10">
-                 {/* Visa Logo - Adjusted for optical balance */}
+            <div className="flex flex-col items-center justify-center mt-12">
+              <div className="flex items-center justify-center gap-12 opacity-80 hover:opacity-100 transition-opacity duration-500">
+                 {/* Visa Logo */}
                  <img 
                    src={visaLogo} 
                    alt="Visa" 
-                   className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 mix-blend-multiply dark:mix-blend-screen" 
+                   className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen" 
                  />
                  
-                 <div className="h-8 w-px bg-border/50"></div>
+                 <div className="h-8 w-px bg-gray-300 dark:bg-gray-700"></div>
                  
-                 {/* Stripe Logo - Adjusted height to match visual weight of Visa */}
+                 {/* Stripe Logo */}
                  <img 
                    src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" 
                    alt="Stripe" 
-                   className="h-7 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" 
+                   className="h-10 w-auto object-contain" 
                  />
               </div>
             </div>
