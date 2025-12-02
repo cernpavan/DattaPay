@@ -433,7 +433,9 @@ export default function LandingPage() {
           </div>
           
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="https://complyremit.com/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Privacy</a>
+            <Link href="/privacy">
+              <a className="hover:text-foreground transition-colors">Privacy</a>
+            </Link>
             {/* Removed Licenses link from footer as per request, moved content to hero */}
             <button 
               onClick={() => setIsModalOpen(true)}
